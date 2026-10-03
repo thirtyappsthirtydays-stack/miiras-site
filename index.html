@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Miiras | Start the money talk with your family</title>
+<meta name="description" content="Miiras helps you work out what to ask your family about money, practice how to say it, and start with one small, gentle question. Join the waitlist for early access.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Miiras | The money talk your family keeps putting off, made easier">
+<meta property="og:description" content="Work out what to ask, practice how to say it, and start with one small, gentle question. Join the waitlist for early access.">
+<meta property="og:url" content="https://getmiiras.com/">
+<meta property="og:image" content="https://getmiiras.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Figtree:wght@400;500;600&display=swap">
+<!-- Analytics: paste your Plausible (or similar privacy-friendly) script here -->
+<style>
+:root{
+  --navy:#1B2A41; --navy-line:#4A5873;
+  --gold:#C9A04E; --gold-text:#7A5C1C;
+  --paper:#F6F3EC; --sand:#EDE8DD; --white:#FFFFFF;
+  --line:#E4DED2; --line-2:#D8D1C2;
+  --text-2:#3F4B5E; --text-3:#4B5566; --on-navy:#D9D3C4;
+  --serif:Fraunces, Georgia, serif; --sans:Figtree, "Helvetica Neue", Arial, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--sans);color:var(--navy);background:var(--paper);-webkit-font-smoothing:antialiased}
+a{color:var(--navy)}a:hover{color:#0E1726}
+svg{display:block}
+h1,h2,h3,p{margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-text)}
+.h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,4vw,52px);line-height:1.1;letter-spacing:-.015em}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;border-radius:999px;background:var(--navy);color:var(--paper);font-weight:600;font-size:17px;text-decoration:none;border:0;font-family:inherit;cursor:pointer;white-space:nowrap;flex-shrink:0}
+.btn:hover{background:#0E1726;color:var(--paper)}
+.btn:disabled{opacity:.7;cursor:default}
+.btn:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+.logo span{font-family:var(--serif);font-weight:600;letter-spacing:-.03em;line-height:1}
+section{padding:56px 0}
+@media(min-width:900px){section{padding:104px 0}.wrap{padding:0 48px}}
+
+/* Header */
+.site-header{border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:14px;padding-bottom:14px}
+.site-header .logo span{font-size:26px}
+.site-header .btn{min-height:44px;padding:0 16px;font-size:14px}
+@media(min-width:900px){.site-header .logo span{font-size:34px}.site-header .btn{padding:0 22px;font-size:15px}}
+
+/* Hero */
+.hero{padding-top:32px}
+.hero .wrap{display:grid;gap:44px}
+.hero-copy{display:flex;flex-direction:column;gap:18px}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(38px,5.2vw,72px);line-height:1.04;letter-spacing:-.02em}
+.hero .sub{font-size:clamp(17px,1.6vw,21px);line-height:1.5;color:var(--text-2);max-width:540px}
+.hero-cta{display:flex;flex-direction:column;gap:12px;padding-top:6px}
+.hero-cta small{font-size:14px;color:var(--text-3)}
+@media(min-width:900px){.hero{padding-top:96px}.hero .wrap{grid-template-columns:1fr 1fr;gap:72px;align-items:center}.hero-copy{gap:28px}.hero-cta{flex-direction:row;align-items:center;gap:20px}}
+.stage{position:relative;display:flex;justify-content:center;padding-bottom:20px}
+.stage::before{content:"";position:absolute;top:40px;left:6%;right:6%;bottom:0;border-radius:40px;background:var(--sand)}
+.stage::after{content:"";position:absolute;top:70px;right:9%;width:110px;height:110px;border-radius:999px;background:var(--gold);opacity:.35}
+.phone{position:relative;z-index:1;width:min(330px,100%);padding:13px;border-radius:44px;background:var(--navy)}
+.screen{border-radius:32px;background:var(--white);padding:22px 20px;display:flex;flex-direction:column;gap:16px}
+.screen-top{display:flex;justify-content:space-between;align-items:center}
+.screen-top .logo span{font-size:18px}
+.chip{font-size:11px;font-weight:600;padding:4px 8px;border-radius:999px;background:#F3EAD6;color:#6B4F14}
+.muted-sm{font-size:12px;color:var(--text-3)}
+.card-stack{position:relative}
+.card-stack::before{content:"";position:absolute;top:16px;left:14px;right:-6px;bottom:-8px;border-radius:22px;background:#E7DCC4;transform:rotate(3deg)}
+.qcard{position:relative;border-radius:22px;background:var(--navy);color:var(--paper);padding:24px 22px;display:flex;flex-direction:column;gap:22px;min-height:230px;justify-content:space-between}
+.qcard .label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.qcard .q{font-family:var(--serif);font-size:25px;line-height:1.24}
+.qcard .hint{font-size:12px;color:var(--on-navy)}
+.ask{display:flex;flex-direction:column;gap:8px}
+.ask b{font-size:12px}
+.ask-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ask-row span,.ask .practice{font-size:13px;font-weight:600;padding:12px 8px;border-radius:12px;text-align:center}
+.ask-row span:first-child{background:var(--navy);color:var(--paper)}
+.ask-row span:last-child{border:1px solid var(--line)}
+.ask .practice{background:var(--paper);font-size:12px}
+.bubble{display:none}
+@media(min-width:900px){
+  .stage{justify-content:flex-end;padding-right:24px}
+  .bubble{position:absolute;z-index:2;left:-40px;bottom:36px;width:190px;padding:16px 18px;border-radius:18px;background:var(--white);border:1px solid var(--line);box-shadow:0 12px 30px rgba(27,42,65,.10);flex-direction:column;gap:8px}
+  .bubble .t{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-text)}
+  .bubble .s{font-size:14px;line-height:1.45}
+  .bubble .tip{font-size:12px;color:var(--text-3)}
+}
+
+@media(min-width:1200px){.bubble{display:flex}}
+
+/* Problem */
+.problem{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.problem .intro{display:grid;gap:16px;margin-bottom:32px}
+.problem .lead{font-family:var(--serif);font-size:clamp(24px,3vw,40px);line-height:1.28}
+.big-stats{display:grid;gap:14px;margin-bottom:12px}
+.big-stat{padding:24px;border-radius:22px;background:var(--navy);color:var(--paper);display:flex;flex-direction:column;gap:8px}
+.big-stat .n{font-family:var(--serif);font-size:clamp(44px,5vw,64px);line-height:1;color:var(--gold)}
+.big-stat .t{font-size:16px;line-height:1.5}
+.src{font-size:13px;line-height:1.55;color:var(--text-3)}
+.stats{display:grid;gap:26px;margin-top:40px}
+.stat{padding-top:18px;border-top:2px solid var(--navy);display:flex;flex-direction:column;gap:10px}
+.stat.gold{border-top-color:var(--gold)}
+.stat .n{font-family:var(--serif);font-size:clamp(40px,4vw,48px);line-height:1}
+.stat p{font-size:16px;line-height:1.6;color:var(--text-2)}
+.stat .s{font-size:12px;line-height:1.4;color:var(--text-3)}
+@media(min-width:700px){.big-stats{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){
+  .problem .intro{grid-template-columns:1fr 2fr;margin-bottom:56px}
+  .big-stats{grid-template-columns:1fr 1fr 1fr;gap:24px;align-items:end}
+  .big-stat{padding:32px}
+  .stats{grid-template-columns:repeat(4,1fr);gap:24px;margin-top:56px}
+}
+
+/* How it works (timeline) */
+.how .head{display:flex;flex-direction:column;gap:14px;max-width:880px;margin-bottom:36px}
+.timeline{display:flex;flex-direction:column}
+.step{display:flex;gap:16px}
+.rail{display:flex;flex-direction:column;align-items:center;width:40px;flex-shrink:0}
+.dot{width:40px;height:40px;border-radius:999px;background:var(--navy);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:18px;position:relative;z-index:1}
+.step:last-child .dot{background:var(--gold);color:var(--navy)}
+.rail::after{content:"";width:2px;flex-grow:1;background:var(--line-2);margin-top:6px}
+.step:last-child .rail::after{display:none}
+.step-body{display:flex;flex-direction:column;gap:6px;padding:6px 0 26px}
+.step:last-child .step-body{padding-bottom:0}
+.step h3{font-family:var(--serif);font-size:clamp(21px,2vw,26px);font-weight:500;line-height:1.2}
+.step p{font-size:16px;line-height:1.6;color:var(--text-2)}
+@media(min-width:900px){
+  .how .head{margin-bottom:64px}
+  .timeline{position:relative;display:grid;grid-template-columns:repeat(4,1fr)}
+  .timeline::before{content:"";position:absolute;top:27px;left:28px;right:12%;height:2px;background:var(--line-2)}
+  .step{flex-direction:column;gap:18px;padding-right:28px}
+  .rail{width:auto;align-items:flex-start}
+  .rail::after{display:none}
+  .dot{width:56px;height:56px;font-size:24px}
+  .step-body{padding:0;gap:18px}
+  .step p{font-size:17px}
+}
+
+/* Decks */
+.decks{background:var(--sand)}
+.decks .head{display:grid;gap:14px;margin-bottom:32px}
+.decks .head p{font-size:17px;line-height:1.6;color:var(--text-2)}
+.deck-grid{display:grid;gap:14px}
+.deck{padding:22px 20px;border-radius:20px;background:var(--white);display:flex;flex-direction:column;gap:12px}
+.deck .lab{display:flex;flex-direction:column;gap:4px}
+.deck .lab span:first-child{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-text)}
+.deck .lab span:last-child{font-size:17px;font-weight:600}
+.deck .q{font-family:var(--serif);font-size:20px;line-height:1.3}
+.deck .tag{font-size:13px;color:var(--text-3)}
+.deck.dark{background:var(--navy);color:var(--paper)}
+.deck.dark .lab span:first-child{color:var(--gold)}
+.deck.dark .tag{color:var(--on-navy)}
+@media(min-width:700px){.deck-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){
+  .decks .head{grid-template-columns:7fr 5fr;gap:24px;align-items:end;margin-bottom:48px}
+  .decks .head p{font-size:18px}
+  .deck-grid{grid-template-columns:repeat(4,1fr);gap:20px}
+  .deck{min-height:320px;justify-content:space-between;padding:26px 24px}
+  .deck .q{font-size:22px}
+}
+
+/* Research */
+.research{background:var(--white)}
+.research .wrap{display:grid;gap:28px}
+.research .head{display:flex;flex-direction:column;gap:16px}
+.research .head p{font-size:17px;line-height:1.6;color:var(--text-2)}
+.quotes{display:flex;flex-direction:column;gap:14px}
+.quote{padding:22px 24px;border-radius:20px;background:var(--paper);display:flex;gap:16px}
+.quote .mark{font-family:var(--serif);font-size:40px;line-height:.9;color:var(--gold)}
+.quote strong{display:block;font-size:17px;font-weight:600;margin-bottom:6px}
+.quote p{font-size:15px;line-height:1.55;color:var(--text-2)}
+@media(min-width:900px){.research .wrap{grid-template-columns:5fr 7fr;gap:48px}.quote{padding:28px 32px}.quote p{font-size:16px}}
+
+/* Waitlist */
+.waitlist{background:var(--navy)}
+.waitlist .wrap{display:grid;gap:28px}
+.waitlist .head{display:flex;flex-direction:column;gap:16px}
+.waitlist .eyebrow{color:var(--gold)}
+.waitlist .h2{color:var(--paper)}
+.waitlist .head p{font-size:17px;line-height:1.6;color:var(--on-navy)}
+form{padding:24px 20px;border-radius:24px;background:var(--white);display:flex;flex-direction:column;gap:24px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field label,legend{font-size:15px;font-weight:600;line-height:1.4}
+.field label em{font-style:normal;font-weight:400;color:var(--text-3)}
+input[type=email],input[type=text]{min-height:52px;padding:0 14px;border-radius:12px;border:1px solid #A9B0BC;background:var(--white);font-size:16px;font-family:inherit;color:var(--navy)}
+fieldset{margin:0;padding:0;border:0}
+legend{padding:0 0 12px}
+.options{display:grid;gap:10px}
+.opt{display:flex;align-items:center;gap:12px;min-height:52px;padding:0 14px;border-radius:12px;border:1px solid var(--line);font-size:15px;cursor:pointer}
+.opt:has(input:checked){border-color:var(--navy);background:#F9F7F2}
+.opt input{accent-color:var(--navy);width:18px;height:18px;margin:0}
+.options.two{grid-template-columns:1fr 1fr}
+.fine{font-size:13px;line-height:1.5;color:var(--text-3)}
+.error{font-size:14px;line-height:1.5;color:#9B2C2C}
+.hp{position:absolute;left:-9999px}
+@media(min-width:600px){.fields-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}.options.four{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.waitlist .wrap{grid-template-columns:5fr 7fr;gap:48px}.waitlist .head p{font-size:18px}form{padding:44px}}
+
+/* Footer */
+footer{border-top:1px solid var(--line);padding:32px 0;font-size:14px;color:var(--text-3)}
+footer .wrap{display:flex;flex-direction:column;gap:16px}
+footer .logo span{font-size:22px;color:var(--navy)}
+footer .links{display:flex;gap:24px;flex-wrap:wrap}
+@media(min-width:900px){footer{padding:48px 0}footer .wrap{flex-direction:row;justify-content:space-between;align-items:flex-start}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="Miiras home">
+      <svg width="36" height="36" viewBox="0 0 120 120" aria-hidden="true"><path d="M28 100 V70 a16 16 0 0 1 32 0 V100" fill="none" stroke="#1B2A41" stroke-width="14" stroke-linecap="round"/><path d="M60 100 V58 a16 16 0 0 1 32 0 V100" fill="none" stroke="#1B2A41" stroke-width="14" stroke-linecap="round"/><circle cx="44" cy="32" r="8" fill="#1B2A41"/><circle cx="76" cy="20" r="8" fill="#C9A04E"/></svg>
+      <span>miiras</span>
+    </a>
+    <a class="btn" href="#waitlist" data-cta="header">Join the waitlist</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <div class="eyebrow">For families, across generations</div>
+      <h1 id="headline">The money talk your family keeps putting off, made easier.</h1>
+      <p class="sub" id="subhead">Miiras helps you work out what to ask, practice how to say it, and start with one small, gentle question.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#waitlist" data-cta="hero">Get early access</a>
+        <small>Free to join. Your family doesn't need the app.</small>
+      </div>
+    </div>
+
+    <div class="stage" aria-hidden="true">
+      <div class="phone">
+        <div class="screen">
+          <div class="screen-top">
+            <div class="logo">
+              <svg width="22" height="22" viewBox="0 0 120 120"><path d="M28 100 V70 a16 16 0 0 1 32 0 V100" fill="none" stroke="#1B2A41" stroke-width="14" stroke-linecap="round"/><path d="M60 100 V58 a16 16 0 0 1 32 0 V100" fill="none" stroke="#1B2A41" stroke-width="14" stroke-linecap="round"/><circle cx="44" cy="32" r="8" fill="#1B2A41"/><circle cx="76" cy="20" r="8" fill="#C9A04E"/></svg>
+              <span>miiras</span>
+            </div>
+            <span class="chip">For Mom and Dad</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:2px">
+            <span class="muted-sm">What matters to you · a gentle start</span>
+            <span class="muted-sm">Card 3 of 12</span>
+          </div>
+          <div class="card-stack">
+            <div class="qcard">
+              <span class="label">Worried about: their retirement</span>
+              <span class="q">Is there anything about retirement that keeps you up at night?</span>
+              <span class="hint">No numbers needed. Just how they feel.</span>
+            </div>
+          </div>
+          <div class="ask">
+            <b>How do you want to ask?</b>
+            <div class="ask-row"><span>In person</span><span>Send a message</span></div>
+            <span class="practice">Practice it first</span>
+          </div>
+        </div>
+      </div>
+      <div class="bubble">
+        <span class="t">Practice partner</span>
+        <span class="s">"Why are you asking? Is everything okay?"</span>
+        <span class="tip">Try: "Nothing's wrong. I just want to understand."</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="wrap">
+    <div class="intro">
+      <div class="eyebrow">The problem</div>
+      <p class="lead">Almost every family agrees the money conversation matters. Far fewer have actually had it.</p>
+    </div>
+    <div class="big-stats">
+      <div class="big-stat"><span class="n">97%</span><span class="t">of families say talking about estate planning is important.</span></div>
+      <div class="big-stat"><span class="n">~1 in 2</span><span class="t">haven't had those conversations yet.</span></div>
+      <p class="src">Fidelity Investments, 2025 Family &amp; Finance Study. Survey of parents 55+ with $500k+ in investable assets and their adult children. <a href="https://www.businesswire.com/news/home/20251113062564/en/Fidelity-Study-Finds-the-Great-Wealth-Transfer-Leaves-Families-Poised-to-Build-Stronger-Financial-Futures-If-They-Talk" target="_blank" rel="noopener">Source</a></p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="n">13%</span><p>of adult children know what their parents have, what it's worth and how it will be shared.</p><span class="s">Kiplinger &amp; Morning Consult, 2026 · <a href="https://cdn.mos.cms.futurecdn.net/RqDJxhS62GcVwoLcxB8BC6/Kiplinger_MorningConsult_TrillionDollarTalkSurvey.pdf" target="_blank" rel="noopener">Source</a></span></div>
+      <div class="stat"><span class="n">6 in 10</span><p>adult children would rather talk to their parents about politics than inheritance.</p><span class="s">Kiplinger &amp; Morning Consult, 2026 · <a href="https://cdn.mos.cms.futurecdn.net/RqDJxhS62GcVwoLcxB8BC6/Kiplinger_MorningConsult_TrillionDollarTalkSurvey.pdf" target="_blank" rel="noopener">Source</a></span></div>
+      <div class="stat"><span class="n">2nd</span><p>Inheritance ranked the second-hardest topic for families to talk about, after sex and dating.</p><span class="s">Kiplinger, 2026 · <a href="https://www.kiplinger.com/retirement/inheritance/we-asked-americans-about-inheritance-and-the-great-wealth-transfer-heres-what-we-learned" target="_blank" rel="noopener">Source</a></span></div>
+      <div class="stat gold"><span class="n">3x</span><p>Parents who shared their completed plans were more than three times as likely to feel confident in their planning.</p><span class="s">Fidelity, 2026. Parents 55+ with $500k+ · <a href="https://www.thewealthadvisor.com/article/fidelity-finds-4-5-parents-havent-told-their-children-estate-plan" target="_blank" rel="noopener">Source</a></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">How Miiras helps</div>
+      <h2 class="h2">From a knot in your stomach to a conversation you're ready for.</h2>
+    </div>
+    <div class="timeline">
+      <div class="step"><div class="rail"><div class="dot">1</div></div><div class="step-body"><h3>Name what's worrying you</h3><p>Say what's on your mind, even if it's messy. Miiras helps you understand what you're really worried about, and why it matters to you.</p></div></div>
+      <div class="step"><div class="rail"><div class="dot">2</div></div><div class="step-body"><h3>Start small</h3><p>Pick a gentle question instead of one big talk. Ask in person, over dinner, or in a message you can send today.</p></div></div>
+      <div class="step"><div class="rail"><div class="dot">3</div></div><div class="step-body"><h3>Practice first</h3><p>Rehearse out loud with a practice partner who can be open, brush it off, or get defensive, so the real talk feels familiar.</p></div></div>
+      <div class="step"><div class="rail"><div class="dot">4</div></div><div class="step-body"><h3>Keep what you learn</h3><p>Note what you found out, what's still open, and the next small step, so each talk builds on the last.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="decks">
+  <div class="wrap">
+    <div class="head">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div class="eyebrow">Conversation decks</div>
+        <h2 class="h2" style="font-size:clamp(28px,3.4vw,48px)">Be ready for whatever comes, one question at a time.</h2>
+      </div>
+      <p>From retirement to health to what's written down. Start with how they feel, not the numbers, and go a little deeper with each short talk.</p>
+    </div>
+    <div class="deck-grid">
+      <div class="deck"><div class="lab"><span>Deck 1</span><span>Your retirement</span></div><span class="q">"When do you picture yourself retiring, and do you feel you have a plan for it?"</span><span class="tag">A gentle first question</span></div>
+      <div class="deck"><div class="lab"><span>Deck 2</span><span>Money for later</span></div><span class="q">"Do you feel your savings will cover what life costs once you stop working?"</span><span class="tag">Feelings first, figures later</span></div>
+      <div class="deck"><div class="lab"><span>Deck 3</span><span>If your health changes</span></div><span class="q">"If you had a health scare, is there a plan for how bills and care would be handled?"</span><span class="tag">So you're ready to help</span></div>
+      <div class="deck dark"><div class="lab"><span>Deck 4</span><span>What's in writing</span></div><span class="q">"Have you put anything in writing, like a will or trust, about what you'd want?"</span><span class="tag">Best once you've talked a bit</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="research">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Built on research</div>
+      <h2 class="h2" style="font-size:clamp(28px,3.4vw,48px)">We listened to both generations first.</h2>
+      <p>Before building anything, we sat down with parents and adult children to talk about money, family and the future. Here's what kept coming up.</p>
+    </div>
+    <div class="quotes">
+      <div class="quote"><span class="mark" aria-hidden="true">“</span><div><strong>Everyone thinks it matters. Nobody wants to go first.</strong><p>Both generations said they'd welcome the conversation, if the other one started it.</p></div></div>
+      <div class="quote"><span class="mark" aria-hidden="true">“</span><div><strong>It's not about the money. It's about being ready.</strong><p>Adult children mostly wanted to know they could help if something happened, not what they'd get.</p></div></div>
+      <div class="quote"><span class="mark" aria-hidden="true">“</span><div><strong>Small questions get answered. Big talks get postponed.</strong><p>A single, easy question often led to more than a planned sit-down ever did.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="waitlist" id="waitlist">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Early access</div>
+      <h2 class="h2">Be one of the first to try Miiras.</h2>
+      <p>We're opening Miiras to a small group first, and every person who joins gets a personal email from the founder.</p>
+    </div>
+
+    <form name="waitlist" method="POST" action="https://formspree.io/f/xkjgeqjv">
+      <input type="hidden" name="_subject" value="New Miiras waitlist signup">
+      <input type="hidden" name="variant" id="f-variant" value="">
+      <input type="hidden" name="utm_source" id="f-source" value="">
+      <input type="hidden" name="utm_campaign" id="f-campaign" value="">
+      <p class="hp"><label>Leave this empty <input name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
+
+      <div class="fields-2">
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+        </div>
+        <div class="field">
+          <label for="first-name">First name <em>(optional)</em></label>
+          <input id="first-name" name="first_name" type="text" autocomplete="given-name" placeholder="First name">
+        </div>
+      </div>
+
+      <fieldset>
+        <legend>Who would you like to talk with?</legend>
+        <div class="options four">
+          <label class="opt"><input type="radio" name="talk_with" value="My parents" required> My parents</label>
+          <label class="opt"><input type="radio" name="talk_with" value="My children"> My children</label>
+          <label class="opt"><input type="radio" name="talk_with" value="My siblings, first"> My siblings, first</label>
+          <label class="opt"><input type="radio" name="talk_with" value="Not sure yet"> Not sure yet</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Would you try an early version and share feedback on a 30-minute call?</legend>
+        <div class="options two">
+          <label class="opt"><input type="radio" name="call" value="Yes" required> Yes</label>
+          <label class="opt"><input type="radio" name="call" value="Maybe later"> Maybe later</label>
+        </div>
+      </fieldset>
+
+      <button class="btn" type="submit" id="f-submit">Join the waitlist</button>
+      <p class="error" id="f-error" role="alert" hidden>Something went wrong. Please try again, or email us at hello@getmiiras.com.</p>
+      <p class="fine">We'll only use your email to contact you about Miiras early access, and we'll never contact your family. Unsubscribe any time. <a href="/privacy.html">Privacy policy</a></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div style="display:flex;flex-direction:column;gap:12px;max-width:620px">
+      <a class="logo" href="/" aria-label="Miiras home">
+        <svg width="26" height="26" viewBox="0 0 120 120" aria-hidden="true"><path d="M28 100 V70 a16 16 0 0 1 32 0 V100" fill="none" stroke="#1B2A41" stroke-width="14" stroke-linecap="round"/><path d="M60 100 V58 a16 16 0 0 1 32 0 V100" fill="none" stroke="#1B2A41" stroke-width="14" stroke-linecap="round"/><circle cx="44" cy="32" r="8" fill="#1B2A41"/><circle cx="76" cy="20" r="8" fill="#C9A04E"/></svg>
+        <span>miiras</span>
+      </a>
+      <span style="line-height:1.5">Miiras helps families prepare for conversations about money. It does not provide financial, investment, tax, legal or mental health advice.</span>
+    </div>
+    <div class="links">
+      <a href="/privacy.html">Privacy policy</a>
+      <a href="mailto:hello@getmiiras.com">hello@getmiiras.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  /* Headline test: each visitor gets one variant, kept on repeat visits.
+     Preview a specific one with ?v=A, ?v=B or ?v=C. */
+  var VARIANTS = {
+    A: { h: "The money talk your family keeps putting off, made easier.",
+         s: "Miiras helps you work out what to ask, practice how to say it, and start with one small, gentle question." },
+    B: { h: "Start the money conversation with your family.",
+         s: "Gentle conversation cards, a place to practice, and a simple plan for what to say first, so it feels less like an interrogation and more like a chat." },
+    C: { h: "Talk about money as a family, before you have to.",
+         s: "Most families wait until something happens. Miiras helps you start small now, one question at a time, while it's still an easy conversation." }
+  };
+  var params = new URLSearchParams(location.search);
+  var v = (params.get("v") || "").toUpperCase();
+  if (!VARIANTS[v]) { try { v = localStorage.getItem("miiras_v3_variant") || ""; } catch (e) { v = ""; } }
+  if (!VARIANTS[v]) v = ["A", "B", "C"][Math.floor(Math.random() * 3)];
+  try { localStorage.setItem("miiras_v3_variant", v); } catch (e) {}
+
+  document.getElementById("headline").textContent = VARIANTS[v].h;
+  document.getElementById("subhead").textContent = VARIANTS[v].s;
+  document.getElementById("f-variant").value = v;
+  document.getElementById("f-source").value = params.get("utm_source") || "direct";
+  document.getElementById("f-campaign").value = params.get("utm_campaign") || "";
+
+  /* If Plausible is installed, send events with the variant */
+  function track(name, props) { if (window.plausible) window.plausible(name, { props: props }); }
+  track("Variant view", { variant: v });
+  document.querySelectorAll("[data-cta]").forEach(function (el) {
+    el.addEventListener("click", function () { track("CTA click", { variant: v, button: el.getAttribute("data-cta") }); });
+  });
+
+  var form = document.querySelector("form[name=waitlist]");
+  var btn = document.getElementById("f-submit");
+  var err = document.getElementById("f-error");
+  var started = false;
+  form.addEventListener("input", function () { if (!started) { started = true; track("Form started", { variant: v }); } });
+
+  /* Send to Formspree in the background, then go to the thank-you page */
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    err.hidden = true;
+    btn.disabled = true;
+    btn.textContent = "Joining…";
+    fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } })
+      .then(function (res) {
+        if (!res.ok) throw new Error("Request failed");
+        track("Signup", { variant: v });
+        window.location.href = "/thank-you.html";
+      })
+      .catch(function () {
+        err.hidden = false;
+        btn.disabled = false;
+        btn.textContent = "Join the waitlist";
+      });
+  });
+})();
+</script>
+</body>
+</html>
