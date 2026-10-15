@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Miiras | Conversation cards app preview</title>
+<meta name="description" content="Try the Miiras conversation cards app in your browser: 10 decks and 100 questions that help families talk about money, health, care and the future.">
+<meta property="og:title" content="Miiras | Conversation cards app preview">
+<meta property="og:description" content="10 decks, 100 questions that help families talk about money, health, care and the future.">
+<meta property="og:url" content="https://getmiiras.com/app/">
+<link rel="icon" href="live/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Figtree:wght@400;500;600&display=swap">
+<script>
+  // On a phone, skip the frame and open the app full screen.
+  if (window.matchMedia && window.matchMedia('(max-width: 640px)').matches) {
+    location.replace('live/');
+  }
+</script>
+<style>
+  :root {
+    --navy: #1B2A41; --navy-deep: #0E1726; --paper: #F6F3EC; --sand: #EDE8DD;
+    --gold-text: #7A5C1C; --text-2: #3F4B5E; --line: #E4DED2;
+    --serif: Fraunces, Georgia, serif; --sans: Figtree, "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0; background: var(--paper); color: var(--navy);
+    font-family: var(--sans); -webkit-font-smoothing: antialiased;
+  }
+  main {
+    min-height: 100%; display: flex; align-items: center; justify-content: center;
+    gap: clamp(32px, 6vw, 96px); padding: 32px 24px;
+  }
+  .intro { max-width: 380px; }
+  .eyebrow {
+    font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold-text); margin: 0 0 14px;
+  }
+  h1 {
+    font-family: var(--serif); font-weight: 500; font-size: clamp(32px, 3.4vw, 44px);
+    line-height: 1.08; letter-spacing: -0.01em; margin: 0 0 16px;
+  }
+  .lede { font-size: 17px; line-height: 1.55; color: var(--text-2); margin: 0 0 24px; }
+  .facts { list-style: none; padding: 0; margin: 0 0 28px; border-top: 1px solid var(--line); }
+  .facts li {
+    display: flex; justify-content: space-between; gap: 16px;
+    padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 15px;
+  }
+  .facts span:first-child { color: var(--text-2); }
+  .facts span:last-child { font-weight: 500; text-align: right; }
+  .links { display: flex; flex-wrap: wrap; gap: 12px 20px; font-size: 15px; }
+  .links a { color: var(--navy); font-weight: 600; text-underline-offset: 3px; }
+  .credit { margin-top: 28px; font-size: 13px; color: var(--text-2); }
+
+  .device {
+    flex: none; position: relative;
+    width: calc(var(--s, 1) * 414px); height: calc(var(--s, 1) * 868px);
+  }
+  .bezel {
+    position: absolute; inset: 0; transform-origin: top left;
+    width: 414px; height: 868px; transform: scale(var(--s, 1));
+    border-radius: 60px; background: var(--navy-deep); padding: 12px;
+    box-shadow: 0 40px 80px -30px rgba(14, 23, 38, 0.45), 0 0 0 1px rgba(14, 23, 38, 0.08);
+  }
+  .screen {
+    width: 390px; height: 844px; border: 0; display: block;
+    border-radius: 48px; background: var(--paper);
+  }
+
+  @media (max-width: 900px) {
+    main { flex-direction: column; }
+    .intro { text-align: left; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <section class="intro">
+    <p class="eyebrow">App preview</p>
+    <h1>Miiras conversation cards</h1>
+    <p class="lede">Questions that help families talk about money, health, care and the future, one card at a time. This is the iOS and Android app running in your browser.</p>
+    <ul class="facts">
+      <li><span>Content</span><span>10 decks, 100 questions</span></li>
+      <li><span>Platforms</span><span>iOS and Android, built with Expo</span></li>
+      <li><span>Privacy</span><span>No accounts, nothing saved</span></li>
+    </ul>
+    <div class="links">
+      <a href="live/">Open full screen</a>
+      <a href="/">getmiiras.com</a>
+    </div>
+    <p class="credit">Designed and built by Bengisu Halezeroglu</p>
+  </section>
+
+  <div class="device" aria-label="Miiras app running in a phone frame">
+    <div class="bezel">
+      <iframe class="screen" src="live/" title="Miiras app"></iframe>
+    </div>
+  </div>
+</main>
+<script>
+  // Scale the phone to fit the window height.
+  function fit() {
+    var s = Math.min(1, (window.innerHeight - 64) / 868);
+    document.documentElement.style.setProperty('--s', Math.max(0.6, s).toFixed(3));
+  }
+  fit();
+  window.addEventListener('resize', fit);
+</script>
+</body>
+</html>
